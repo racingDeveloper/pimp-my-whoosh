@@ -12,6 +12,7 @@ struct PimpMyWhooshApp: App {
                 .environmentObject(state)
                 .frame(minWidth: 860, minHeight: 600)
         }
+        .defaultSize(width: 1000, height: 720)
         .windowResizability(.contentMinSize)
     }
 }
@@ -37,7 +38,9 @@ final class AppState: ObservableObject {
     @Published var busy = false
     @Published var snapshot: GameSnapshot?
     // Navigation state lives here rather than in @State: with only the Command Line Tools the SwiftUIMacros plugin is missing.
-    @Published var pane: Pane? = .overview
+    // `-InitialPane <section>` on the command line opens a section directly (used to take the README screenshots).
+    @Published var pane: Pane? = UserDefaults.standard.string(forKey: "InitialPane")
+        .flatMap { name in SettingSection(rawValue: name).map(Pane.section) ?? (name == "preview" ? .preview : nil) } ?? .overview
     @Published var infoKey: String?
     @Published var search = ""
 

@@ -6,6 +6,12 @@ A small macOS app that unlocks the hidden graphics and system settings of the **
 
 MyWhoosh's own menu offers a handful of presets. Under the hood it is an Unreal Engine 5 game, and many more engine settings can be tuned through its configuration files. Pimp My Whoosh exposes them with allowed values only, shows what the game would use on its own, and explains what each one does.
 
+<p align="center"><img src="docs/screenshots/overview.png" width="760" alt="Overview: presets and a summary of what will be applied"></p>
+
+| Quality groups up to Cinematic | Resolution and sharpening | Distance and detail |
+|---|---|---|
+| <img src="docs/screenshots/quality.png" alt="Quality section"> | <img src="docs/screenshots/resolution.png" alt="Resolution section"> | <img src="docs/screenshots/detail.png" alt="Distance and detail section"> |
+
 > **Not affiliated with MyWhoosh.** MyWhoosh is a trademark of its respective owner. This is an independent, unofficial tool. It does not modify the game's application bundle, packages or account data: it only writes the user-level configuration files Unreal Engine reads at startup. Use it at your own risk.
 
 ## AI disclosure
