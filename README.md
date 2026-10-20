@@ -12,6 +12,12 @@ MyWhoosh's own menu offers a handful of presets. Under the hood it is an Unreal 
 |---|---|---|
 | <img src="docs/screenshots/quality.png" alt="Quality section"> | <img src="docs/screenshots/resolution.png" alt="Resolution section"> | <img src="docs/screenshots/detail.png" alt="Distance and detail section"> |
 
+## Download
+
+**[Download the latest release (.dmg)](https://github.com/racingDeveloper/pimp-my-whoosh/releases/latest)**, open it and drag Pimp My Whoosh to Applications.
+
+The app isn't signed with an Apple Developer ID yet, so the first time macOS blocks it: open **System Settings › Privacy & Security** and click **Open Anyway**. Then grant it **Full Disk Access** (see [Requirements](#requirements)).
+
 > **Not affiliated with MyWhoosh.** MyWhoosh is a trademark of its respective owner. This is an independent, unofficial tool. It does not modify the game's application bundle, packages or account data: it only writes the user-level configuration files Unreal Engine reads at startup. Use it at your own risk.
 
 ## AI disclosure
