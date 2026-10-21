@@ -32,6 +32,9 @@ final class AppState: ObservableObject {
     @Published var quitAfterLaunch: Bool {
         didSet { UserDefaults.standard.set(quitAfterLaunch, forKey: Keys.quit) }
     }
+    @Published var performanceHUD: Bool {
+        didSet { UserDefaults.standard.set(performanceHUD, forKey: Keys.hud) }
+    }
     @Published var accessProblem: ConfigError?
     @Published var notice: Notice?
     @Published var gameRunning = GameLauncher.isRunning
@@ -50,7 +53,7 @@ final class AppState: ObservableObject {
     }
 
     private enum Keys {
-        static let values = "values", preset = "preset", quit = "quitAfterLaunch"
+        static let values = "values", preset = "preset", quit = "quitAfterLaunch", hud = "performanceHUD"
     }
 
     init() {
@@ -61,6 +64,7 @@ final class AppState: ObservableObject {
         values = Catalog.validated(stored ?? firstRun.values)
         presetID = defaults.string(forKey: Keys.preset) ?? firstRun.id
         quitAfterLaunch = defaults.object(forKey: Keys.quit) as? Bool ?? true
+        performanceHUD = defaults.bool(forKey: Keys.hud)
         refresh()
     }
 
@@ -146,7 +150,7 @@ final class AppState: ObservableObject {
             defer { busy = false }
             do {
                 try ConfigWriter.apply(plan)
-                try await GameLauncher.launch()
+                try await GameLauncher.launch(performanceHUD: performanceHUD)
                 if quitAfterLaunch {
                     NSApp.terminate(nil)
                 } else {

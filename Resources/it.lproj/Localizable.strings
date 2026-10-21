@@ -299,3 +299,7 @@
 "Above 1 the engine asks for more detailed texture levels, also for distant surfaces: sharper scenery further away, more memory used. 1.5 is a good balance." = "Sopra 1 il motore chiede livelli di texture più dettagliati, anche per le superfici lontane: paesaggio più nitido in distanza, più memoria usata. 1,5 è un buon compromesso.";
 "Negative values (−0.5, −1) pick more detailed texture levels at the same distance: everything gets sharper, but fine patterns can shimmer. Rendering above 100% smooths that out." = "Valori negativi (−0,5, −1) scelgono livelli di texture più dettagliati alla stessa distanza: tutto diventa più nitido, ma i motivi fini possono sfarfallare. Il rendering sopra il 100% lo attenua.";
 "Keeps every texture at its highest resolution, whatever the distance. The sharpest and most memory-hungry option: makes sense on Macs with 32 GB of memory or more." = "Tiene ogni texture alla risoluzione massima, a qualunque distanza. L'opzione più nitida e più pesante sulla memoria: ha senso sui Mac con 32 GB di memoria o più.";
+
+/* Launch options */
+"Show performance overlay" = "Mostra overlay prestazioni";
+"Apple's Metal HUD in a corner of the game: frame rate, frame time and GPU memory. Handy to see what each setting costs. Applies to the next launch from here." = "L'HUD Metal di Apple in un angolo del gioco: FPS, tempo per frame e memoria GPU. Utile per vedere quanto costa ogni impostazione. Vale dal prossimo avvio da qui.";

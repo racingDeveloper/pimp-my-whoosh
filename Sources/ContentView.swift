@@ -127,6 +127,10 @@ struct OverviewPane: View {
 
             Section {
                 Toggle("Quit Pimp My Whoosh after launching", isOn: $state.quitAfterLaunch)
+                Toggle(isOn: $state.performanceHUD) {
+                    Text("Show performance overlay")
+                    Text("Apple's Metal HUD in a corner of the game: frame rate, frame time and GPU memory. Handy to see what each setting costs. Applies to the next launch from here.")
+                }
             } header: {
                 Text("Launch")
             } footer: {

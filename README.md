@@ -41,6 +41,7 @@ This project was developed with the help of AI (Anthropic's Claude), including t
 - **Explanations**: what each setting does, what it costs, and how certain it is to have an effect in MyWhoosh (guaranteed / depends on the route / experimental).
 - **Search** across all settings, a **preview** of exactly what will be written, automatic **backups** before each write.
 - **Launch MyWhoosh** with one click (⌘R), so the settings are always in place when the game starts.
+- **Performance overlay**: optionally launch the game with Apple's Metal HUD (frame rate, frame time, GPU memory) to see what each setting costs.
 - English and Italian.
 
 ## Requirements

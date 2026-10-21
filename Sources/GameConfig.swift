@@ -328,11 +328,16 @@ enum GameLauncher {
         !NSRunningApplication.runningApplications(withBundleIdentifier: GamePaths.bundleID).isEmpty
     }
 
-    static func launch() async throws {
+    /// `performanceHUD` turns on Apple's Metal Performance HUD for this launch only (FPS, frame time, GPU memory).
+    static func launch(performanceHUD: Bool = false) async throws {
         guard let app = GamePaths.gameApp else {
             throw ConfigError.io(L("MyWhoosh isn't installed in /Applications."))
         }
-        try await NSWorkspace.shared.openApplication(at: app, configuration: NSWorkspace.OpenConfiguration())
+        let configuration = NSWorkspace.OpenConfiguration()
+        if performanceHUD {
+            configuration.environment = ["MTL_HUD_ENABLED": "1"]
+        }
+        try await NSWorkspace.shared.openApplication(at: app, configuration: configuration)
         Log.write("Launched \(app.lastPathComponent)")
     }
 }
