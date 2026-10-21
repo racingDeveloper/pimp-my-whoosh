@@ -20,8 +20,6 @@ MyWhoosh's own menu offers a handful of presets. Under the hood it is an Unreal 
 | <img src="docs/screenshots/start-behind-before.jpg" alt="Start line from behind with the game's own settings: pixelated trees and blurry banner text"> | <img src="docs/screenshots/start-behind-after.jpg" alt="Same view with the Max preset: crisp trees, banner lettering and riders"> |
 | <img src="docs/screenshots/start-side-before.jpg" alt="Riders at the start line with the game's own settings"> | <img src="docs/screenshots/start-side-after.jpg" alt="Riders at the start line with the Max preset: sharper jerseys, bikes and foliage"> |
 
-The Max preset renders at 150%, which costs GPU: here it ran at 35–36 FPS instead of the game's 40 FPS cap. Use Balanced, or lower the render resolution, if you prefer a higher frame rate.
-
 ## Download
 
 **[Download the latest release (.dmg)](https://github.com/racingDeveloper/pimp-my-whoosh/releases/latest)**, open it and drag Pimp My Whoosh to Applications.
