@@ -35,7 +35,7 @@ This project was developed with the help of AI (Anthropic's Claude), including t
 ## Features
 
 - **Presets**: Max, Balanced, Performance, or the game's own defaults, then fine-tune any setting.
-- **47 settings in 8 sections**: quality groups, render resolution and sharpening, frame rate cap and latency, view and shadow distance, effects, lighting, display and window, audio and system.
+- **49 settings in 8 sections**: quality groups, render resolution and sharpening, frame rate cap and latency, view and shadow distance, effects, lighting, display and window, audio and system.
 - **Allowed values only**: every control is limited to the values the engine accepts.
 - **The game's value next to each setting**: what MyWhoosh decided on its own (read from its files), or the engine default when the game doesn't set it.
 - **Explanations**: what each setting does, what it costs, and how certain it is to have an effect in MyWhoosh (guaranteed / depends on the route / experimental).
@@ -73,7 +73,7 @@ Findings from analysing MyWhoosh 6.2.3 (Unreal Engine 5.6) on macOS:
 - **`[SystemSettings]` in `Engine.ini` wins.** Values there have a higher priority than the ones the game sets through its settings API, so they stick (for the forced 40 FPS cap this comes from static analysis: check the in-game stats). But the game **removes that section when it quits**, which is why Pimp My Whoosh rewrites it right before every launch.
 - **The game isn't Retina-aware.** It renders at the logical resolution and macOS scales it up ×2. Raising `r.ScreenPercentage` above 100% (supersampling) is the biggest sharpness improvement.
 - **None of the exposed engine variables is cheat-only or read-only** in the shipping build, and MyWhoosh's C++ code never sets them directly (its Blueprint scripts are encrypted and couldn't be checked).
-- Some settings only matter if a route actually uses the feature (fog, lens flares, film grain…): the game's content is encrypted, so the app marks those as "depends on the route".
+- Some settings only matter if a route actually uses the feature. The world packages are compressed and their index is encrypted, but some asset paths and component names are readable in plain text: the app names the worlds where a feature was found (water in AlWathba and Japan, contact shadows in France and Bhutan, light shafts in seven worlds…). No landscape grass turned up anywhere, so `grass.densityScale` is marked as most likely without effect.
 
 Files touched, all inside `~/Library/Containers/com.whoosh.whooshgame/Data/`:
 

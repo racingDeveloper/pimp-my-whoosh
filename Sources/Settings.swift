@@ -235,6 +235,14 @@ enum Catalog {
                    section: .effects, control: .choice(onOff)),
         SettingDef(key: "r.VolumetricFog", title: L("Volumetric fog"), help: L("r.VolumetricFog: 0 off, 1 on."),
                    section: .effects, control: .choice(onOff)),
+        SettingDef(key: "r.LightShaftQuality", title: L("Light shafts"), help: L("r.LightShaftQuality: 0 off, 1 on (default)."),
+                   section: .effects, control: .choice(onOff)),
+        SettingDef(key: "r.VolumetricRenderTarget.Mode", title: L("Volumetric clouds resolution"),
+                   help: L("r.VolumetricRenderTarget.Mode: 0 quarter-resolution tracing reconstructed at half (default), 1 half resolution, 3 full resolution (cinematic)."),
+                   section: .effects, control: .choice([
+                       Option(value: "0", label: L("0 · Quarter (default)")), Option(value: "1", label: L("1 · Half")),
+                       Option(value: "3", label: L("3 · Full (cinematic)")),
+                   ])),
 
         // Lighting
         SettingDef(key: "r.DynamicGlobalIlluminationMethod", title: L("Dynamic global illumination"),
@@ -315,6 +323,8 @@ enum Catalog {
         "r.LensFlareQuality": .follows("sg.PostProcessQuality"),
         "r.AmbientOcclusionLevels": .follows("sg.PostProcessQuality"),
         "r.SSR.Quality": .follows("sg.ReflectionQuality"),
+        "r.LightShaftQuality": .follows("sg.PostProcessQuality"),
+        "r.VolumetricRenderTarget.Mode": .scalable,
         "r.ContactShadows": .scalable,
         "r.Shadow.Virtual.Enable": .scalable,
     ]
@@ -370,7 +380,7 @@ struct Preset: Identifiable, Hashable {
                    "r.ScreenPercentage": "150", "t.MaxFPS": "60", "r.VSync": "1",
                    "r.Tonemapper.Sharpen": "0.8", "r.MaxAnisotropy": "16", "r.Streaming.PoolSize": "3000",
                    "r.ViewDistanceScale": "2.00", "r.Shadow.MaxResolution": "4096", "r.Shadow.DistanceScale": "2.00",
-                   "r.SkeletalMeshLODBias": "-1", "r.StaticMeshLODDistanceScale": "0.50", "grass.densityScale": "2.00",
+                   "r.SkeletalMeshLODBias": "-1", "r.StaticMeshLODDistanceScale": "0.50",
                ]) { $1 }),
         Preset(id: "balanced", name: L("Balanced"), summary: L("Matches the menu's \"High\" at full resolution, without the superfluous effects."),
                values: allSG("3").merging(noBlur) { $1 }.merging([
