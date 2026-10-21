@@ -17,6 +17,10 @@ MyWhoosh's own menu offers a handful of presets. Under the hood it is an Unreal 
 | Game's own highest settings | With Pimp My Whoosh (Max preset) |
 |---|---|
 | <img src="docs/screenshots/before.jpg" alt="Rider in the garage with the game's own settings: blurry jersey logo and wheels"> | <img src="docs/screenshots/after.jpg" alt="Same rider with the Max preset: sharp jersey logo, frame lettering and spokes"> |
+| <img src="docs/screenshots/start-behind-before.jpg" alt="Start line from behind with the game's own settings: pixelated trees and blurry banner text"> | <img src="docs/screenshots/start-behind-after.jpg" alt="Same view with the Max preset: crisp trees, banner lettering and riders"> |
+| <img src="docs/screenshots/start-side-before.jpg" alt="Riders at the start line with the game's own settings"> | <img src="docs/screenshots/start-side-after.jpg" alt="Riders at the start line with the Max preset: sharper jerseys, bikes and foliage"> |
+
+Captured on a MacBook Pro (M2 Max). The Max preset renders at 150%, which costs GPU: here it ran at 35–36 FPS instead of the game's 40 FPS cap. Use Balanced, or lower the render resolution, if you prefer a higher frame rate.
 
 ## Download
 
