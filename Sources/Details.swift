@@ -40,7 +40,7 @@ extension Catalog {
         "r.Shadow.DistanceScale": "1.00", "r.ViewDistanceScale": "1.00", "r.StaticMeshLODDistanceScale": "1.00",
         "r.MotionBlurQuality": "4", "r.DepthOfFieldQuality": "2", "r.SceneColorFringeQuality": "1",
         "r.BloomQuality": "5", "r.LensFlareQuality": "2", "r.AmbientOcclusionLevels": "-1", "r.SSR.Quality": "3",
-        "r.ContactShadows": "1", "r.LightShaftQuality": "1", "r.VolumetricRenderTarget.Mode": "0", "r.Streaming.PoolSize": L("automatic"), "foliage.DensityScale": "1.00",
+        "r.ContactShadows": "1", "r.LightShaftQuality": "1", "r.Streaming.Boost": "1.00", "r.MipMapLODBias": "0.0", "r.VolumetricRenderTarget.Mode": "0", "r.Streaming.PoolSize": L("automatic"), "foliage.DensityScale": "1.00",
         "foliage.LODDistanceScale": "1.00",
     ]
 
@@ -81,6 +81,11 @@ extension Catalog {
         "grass.densityScale": .init(effect: .experimental, detail: L("Grass generated automatically on landscape terrain. No trace of it was found in any world's packages, so it most likely has no effect in MyWhoosh.")),
         "foliage.LODDistanceScale": .init(effect: .always, detail: L("Distance at which trees and bushes switch to simpler models. Higher values = detailed vegetation further away. Foliage is in practically every world.")),
         "r.Streaming.PoolSize": .init(effect: .always, detail: L("Memory reserved for textures (the default lets the engine decide). If too small, textures stay blurry or \"load in\" while you ride. On Macs with 32 GB or more, 3000–4000 MB is safe.")),
+
+        "r.Streaming.FullyLoadUsedTextures": .init(effect: .always, detail: L("Textures in view are loaded at full resolution right away, instead of gradually: no more blurry road or buildings that sharpen while you ride. Costs some memory and disk work.")),
+        "r.Streaming.Boost": .init(effect: .always, detail: L("Above 1 the engine asks for more detailed texture levels, also for distant surfaces: sharper scenery further away, more memory used. 1.5 is a good balance.")),
+        "r.MipMapLODBias": .init(effect: .always, detail: L("Negative values (−0.5, −1) pick more detailed texture levels at the same distance: everything gets sharper, but fine patterns can shimmer. Rendering above 100% smooths that out.")),
+        "r.Streaming.UseAllMips": .init(effect: .always, detail: L("Keeps every texture at its highest resolution, whatever the distance. The sharpest and most memory-hungry option: makes sense on Macs with 32 GB of memory or more.")),
 
         "r.MotionBlurQuality": .init(effect: .always, detail: L("Motion blur (engine base 4 = very high). At a steady riding speed it blurs the scenery on the sides: many prefer Off, which also saves a little GPU.")),
         "r.DepthOfFieldQuality": .init(effect: .content, detail: L("Background or foreground blur, used mostly in menus, the garage and cinematic shots. 0 keeps everything sharp.")),

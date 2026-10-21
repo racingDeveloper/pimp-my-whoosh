@@ -35,7 +35,7 @@ This project was developed with the help of AI (Anthropic's Claude), including t
 ## Features
 
 - **Presets**: Max, Balanced, Performance, or the game's own defaults, then fine-tune any setting.
-- **49 settings in 8 sections**: quality groups, render resolution and sharpening, frame rate cap and latency, view and shadow distance, effects, lighting, display and window, audio and system.
+- **53 settings in 8 sections**: quality groups, render resolution and sharpening, frame rate cap and latency, view and shadow distance, effects, lighting, display and window, audio and system.
 - **Allowed values only**: every control is limited to the values the engine accepts.
 - **The game's value next to each setting**: what MyWhoosh decided on its own (read from its files), or the engine default when the game doesn't set it.
 - **Explanations**: what each setting does, what it costs, and how certain it is to have an effect in MyWhoosh (guaranteed / depends on the route / experimental).

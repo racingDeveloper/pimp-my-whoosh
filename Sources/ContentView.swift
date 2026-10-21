@@ -355,7 +355,8 @@ struct SettingRow: View {
 
     /// Starting point when a slider is enabled: 1× / 100% when within range.
     private func neutral(_ min: Double, _ max: Double) -> Double {
-        let n: Double = def.key == "r.ScreenPercentage" ? 100 : (def.key == "r.Tonemapper.Sharpen" ? 0.5 : 1)
+        let neutral: [String: Double] = ["r.ScreenPercentage": 100, "r.Tonemapper.Sharpen": 0.5, "r.MipMapLODBias": 0]
+        let n = neutral[def.key] ?? 1
         return Swift.min(Swift.max(n, min), max)
     }
 }

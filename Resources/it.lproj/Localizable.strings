@@ -285,3 +285,17 @@
 "Small contact shadows (wheels on asphalt, objects on the ground). Lights using them were found in France and Bhutan." = "Piccole ombre di contatto (ruote sull'asfalto, oggetti sul terreno). Le luci che le usano compaiono in France e Bhutan.";
 "Sun rays through trees and buildings. Found in AlWathba, AlUla, Japan, UCI 2024, Colombia, France and Belgium. Off gives a few FPS on those routes." = "Raggi di sole tra alberi ed edifici. Trovati in AlWathba, AlUla, Japan, UCI 2024, Colombia, France e Belgium. Off fa guadagnare qualche FPS su quei percorsi.";
 "Volumetric fog. Found only in shared content, not in any specific world: probably used rarely, if at all." = "Nebbia volumetrica. Trovata solo nei contenuti comuni, in nessun mondo specifico: probabilmente usata poco o per niente.";
+
+/* Texture streaming */
+"Load visible textures fully" = "Carica subito le texture visibili";
+"Texture streaming boost" = "Boost streaming texture";
+"Texture sharpness bias" = "Bias nitidezza texture";
+"Always use full-resolution textures" = "Texture sempre a piena risoluzione";
+"r.Streaming.FullyLoadUsedTextures: 1 streams every used texture in at full resolution as fast as possible (default 0)." = "r.Streaming.FullyLoadUsedTextures: 1 carica il prima possibile a piena risoluzione ogni texture usata (default 0).";
+"r.Streaming.Boost: 1 normal, above 1 requests more detailed texture levels (default 1)." = "r.Streaming.Boost: 1 normale, sopra 1 chiede livelli di texture più dettagliati (default 1).";
+"r.MipMapLODBias: negative values use more detailed texture levels, positive values blurrier ones (default 0, range −15 to 15)." = "r.MipMapLODBias: valori negativi usano livelli di texture più dettagliati, positivi più sfocati (default 0, da −15 a 15).";
+"r.Streaming.UseAllMips: 1 keeps every texture level loaded regardless of distance (default 0)." = "r.Streaming.UseAllMips: 1 tiene caricati tutti i livelli di ogni texture, a qualunque distanza (default 0).";
+"Textures in view are loaded at full resolution right away, instead of gradually: no more blurry road or buildings that sharpen while you ride. Costs some memory and disk work." = "Le texture visibili vengono caricate subito a piena risoluzione invece che gradualmente: niente più asfalto o edifici sfocati che si definiscono mentre pedali. Costa un po' di memoria e lavoro su disco.";
+"Above 1 the engine asks for more detailed texture levels, also for distant surfaces: sharper scenery further away, more memory used. 1.5 is a good balance." = "Sopra 1 il motore chiede livelli di texture più dettagliati, anche per le superfici lontane: paesaggio più nitido in distanza, più memoria usata. 1,5 è un buon compromesso.";
+"Negative values (−0.5, −1) pick more detailed texture levels at the same distance: everything gets sharper, but fine patterns can shimmer. Rendering above 100% smooths that out." = "Valori negativi (−0,5, −1) scelgono livelli di texture più dettagliati alla stessa distanza: tutto diventa più nitido, ma i motivi fini possono sfarfallare. Il rendering sopra il 100% lo attenua.";
+"Keeps every texture at its highest resolution, whatever the distance. The sharpest and most memory-hungry option: makes sense on Macs with 32 GB of memory or more." = "Tiene ogni texture alla risoluzione massima, a qualunque distanza. L'opzione più nitida e più pesante sulla memoria: ha senso sui Mac con 32 GB di memoria o più.";
