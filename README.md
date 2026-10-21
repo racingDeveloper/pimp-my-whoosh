@@ -12,6 +12,12 @@ MyWhoosh's own menu offers a handful of presets. Under the hood it is an Unreal 
 |---|---|---|
 | <img src="docs/screenshots/quality.png" alt="Quality section"> | <img src="docs/screenshots/resolution.png" alt="Resolution section"> | <img src="docs/screenshots/detail.png" alt="Distance and detail section"> |
 
+## Before and after
+
+| Game's own highest settings | With Pimp My Whoosh (Max preset) |
+|---|---|
+| <img src="docs/screenshots/before.jpg" alt="Rider in the garage with the game's own settings: blurry jersey logo and wheels"> | <img src="docs/screenshots/after.jpg" alt="Same rider with the Max preset: sharp jersey logo, frame lettering and spokes"> |
+
 ## Download
 
 **[Download the latest release (.dmg)](https://github.com/racingDeveloper/pimp-my-whoosh/releases/latest)**, open it and drag Pimp My Whoosh to Applications.
